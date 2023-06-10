@@ -110,10 +110,10 @@ class Main:
     # Function to create a dashboard screen
     def create_dashboard(self):
         # Create outer frame
-        frame = tk.Frame(self.window, bg="#f0ccf0", height=500, width=850, padx=20, pady=20)
+        frame = tk.Frame(self.window, bg="#DDDDDD", height=500, width=850, padx=20, pady=20)
 
         # Create frame with vertical scrollbars
-        dashboard = VerticalScrolledFrame(frame, bg="#f0ccf0")
+        dashboard = VerticalScrolledFrame(frame, bg="#DDDDDD")
         # Pack the dashboard to fill full space
         dashboard.pack(fill=tk.BOTH, expand=True)
 
@@ -130,7 +130,7 @@ class Main:
         # Loop to create top row of table
         for index, item in enumerate(["I.D", "Product", "Quantity", "Retail Price", "Wholesale Price", "Delete"]):
             element = tk.Label(
-                dashboard, text=item, bg="#FF7276", highlightbackground="black", highlightthickness=1, font=("Helvetica", 12),
+                dashboard, text=item, bg="#FF7276", highlightbackground="black", highlightthickness=1, font=("Helvetica", 15),
             )
             # To pack into table grid
             element.grid(row=0, column=index, sticky=tk.NSEW)
@@ -141,7 +141,7 @@ class Main:
             for col_index, value in enumerate(product): #COLS
                 # Each data in product is turned into a label
                 element = tk.Label(
-                    dashboard, text=value, highlightbackground="black", highlightthickness=1, font=("Helvetica", 12)
+                    dashboard, text=value, highlightbackground="black", highlightthickness=1, font=("Helvetica", 15)
                 )
                 # If even then background is white else grey
                 if row_index % 2 == 0:
@@ -165,10 +165,10 @@ class Main:
     # Function to create history screen
     def create_history(self):
         # Creating outer frame
-        frame = tk.Frame(self.window, bg="#f0ccf0", height=500, width=850, padx=20, pady=20)
+        frame = tk.Frame(self.window, bg="#DDDDDD", height=500, width=850, padx=20, pady=20)
 
         # Creating inner frame
-        history = VerticalScrolledFrame(frame, bg="#f0ccf0")
+        history = VerticalScrolledFrame(frame, bg="#DDDDDD")
         # Packing frame to fill available space
         history.pack(fill=tk.BOTH, expand=True)
 
@@ -193,7 +193,7 @@ class Main:
     # Function to create insert window
     def create_insert(self):
         # Create new window
-        insert = tk.Toplevel(self.window, bg="#f0ccf0")
+        insert = tk.Toplevel(self.window, bg="#DDDDDD")
         # Set window size
         insert.geometry("400x400")
 
@@ -273,7 +273,7 @@ class Main:
     # Function to create change window
     def create_change(self):
         # Create new window
-        change = tk.Toplevel(self.window, bg="#f0ccf0")
+        change = tk.Toplevel(self.window, bg="#DDDDDD")
         # Set new window size
         change.geometry("400x400")
 
